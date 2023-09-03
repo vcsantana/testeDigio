@@ -1,0 +1,6 @@
+framework module Pods_DigioUITests {
+  umbrella header "Pods-DigioUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

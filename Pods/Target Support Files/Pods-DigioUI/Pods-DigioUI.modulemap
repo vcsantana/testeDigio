@@ -1,0 +1,6 @@
+framework module Pods_DigioUI {
+  umbrella header "Pods-DigioUI-umbrella.h"
+
+  export *
+  module * { export * }
+}
