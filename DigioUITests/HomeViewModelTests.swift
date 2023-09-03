@@ -11,7 +11,7 @@ import XCTest
 class HomeViewModelTests: XCTestCase {
 
     func testInit() {
-        // Crie uma instância da HomeViewModel
+      
         let viewModel = HomeViewModel()
 
         XCTAssertEqual(viewModel.name, "Olá! Maria ")
