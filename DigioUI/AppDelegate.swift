@@ -15,18 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-       // Configure o HomeView como a visualização raiz usando o UIHostingController
-       let viewModel = HomeViewModel()
-       let homeView = HomeView(viewModel: viewModel)
-       let hostingController = UIHostingController(rootView: homeView)
+       window = UIWindow(frame: UIScreen.main.bounds)
+ 
+        let viewModel = HomeViewModel()
+        let homeView = HomeView(viewModel: viewModel)
+        let hostingController = UIHostingController(rootView: homeView)
 
-       // Defina o hostingController como a raiz da janela
-       window?.rootViewController = hostingController
+        window?.rootViewController = hostingController
 
-       // Mostrar a janela
         window?.makeKeyAndVisible()
-        // Override point for customization after application launch.
         return true
     }
 

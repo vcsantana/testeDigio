@@ -16,17 +16,12 @@ class HomeViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var error: Error?
     
-    
-    // Adicione métodos para carregar os dados da API ou qualquer outra fonte de dados.
-    
     func loadData() {
-        isLoading = true // Defina isLoading como true para indicar o carregamento
-        //apiClient.fetchData()
+        isLoading = true
     }
     private var apiClient = ApiClient()
         
         init() {
-            // Inicialize sua classe aqui e observe as mudanças na resposta da API.
             apiClient.$response
                 .sink { [weak self] response in
                     DispatchQueue.main.async {
@@ -41,11 +36,9 @@ class HomeViewModel: ObservableObject {
         func handleApiResponse(_ response: Response?) {
             isLoading = false
             guard let response = response else {
-                // Lide com o erro ou carregamento aqui
                 return
             }
             
-            // Preencha seus campos com os dados da API
             banners = response.spotlight
             cards = response.products
             cashUrl = response.cash.bannerURL

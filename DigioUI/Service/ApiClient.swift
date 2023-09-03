@@ -47,7 +47,7 @@ class ApiClient: ObservableObject {
             } catch let decodingError {
                 DispatchQueue.main.async {
                     self.error = decodingError
-                    print(self.error)
+                    print(self.error as Any)
                 }
             }
         }.resume()
